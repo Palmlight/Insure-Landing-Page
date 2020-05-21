@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+//The Imported Google Fonts
+
+$Dark-Violet: hsl(256, 26%, 20%);
+$Grayish-Blue: hsl(216, 30%, 68%);
+$Very-Dark-Violet: hsl(270, 9%, 17%);
+$Dark-Grayish-Violet: hsl(273, 4%, 51%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$DM: 'DM Serif Display', serif;
+$Karla: 'Karla', sans-serif;
+
+* {
+    box-sizing: border-box;
+}
+h1,h2,h3 {
+    font-family: $DM;
+}
+.container {
+    padding: 20px;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div {
+        flex: 1;
+    }
+}
+.align-start {
+    align-items: flex-start;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: transparent;
+    text-align: center;
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 1;
+    cursor: pointer;
+}
+.btn-reverse {
+    border: 2px solid $Very-Dark-Violet;
+    color: $Very-Dark-Violet;
+}
+body {
+    font-family: $Karla;
+    margin: 0;
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+    
+            li {
+                margin-left: 30px;
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $Dark-Grayish-Violet; 
+                }
+            }
+        }
+    }
+    header {
+        background-color: $Dark-Violet;
+        color: #fff;
+        padding: 50px 0;
+        position: relative;
+        margin-bottom: 250px;
+        * {
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            position: relative;
+            padding-top: 50px;
+            margin-top: 0;
+
+            &::before {
+                content: "";
+                top: 0;
+                bottom: 0;
+                height: 1px;
+                width: 200px;
+                background-color: #fff;
+                position: absolute;
+
+
+            }
+        }
+        
+        &::after {
+            position: absolute;
+            content: '';
+            background-image: url("../images/bg-pattern-intro-right-desktop.svg");
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: top right;
+        }
+        
+        &::before {
+            position: absolute;
+            content: '';
+            background-image: url("../images/bg-pattern-intro-left-desktop.svg");
+            bottom: -60%;
+            left: 0;
+            width: 40%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            z-index: 0;
+        }
+        .dsk-intro {
+            max-width: 100%;
+            margin-bottom: -250px;
+            
+            @media screen and (max-width: 100px){
+                margin-bottom: 0;
+                width: calc(100% + 40px);
+            }
+        }
+    }
+    section {
+        .line-top {
+            font-size: 3em;
+            position: relative;
+            padding-top: 30px;
+
+            &::before {
+                content: "";
+                top: 0;
+                bottom: 0;
+                position: absolute;
+                height: 1px;
+                width: 100px;
+                background-color: $Grayish-Blue;
+            }
+        }
+        div {
+            h3 {
+                font-size: 1.5em;
+            }
+            .item p {
+                opacity: 0.8;
+                text-align: justify; 
+                margin-right: 30px;
+            }
+        }
+        .items {
+            display: flex;
+            justify-content: space-evenly;
+            .item {
+                flex: 1;
+
+            }
+        }
+    }
+    .how {
+        background-color: $Very-Dark-Violet;
+        padding: 30px 90px;
+        position: relative;
+        margin: 70px auto;
+        h2 {
+            color: #fff;
+            font-size: 3em;
+            padding: 0;
+            width: 50%;
+        }
+
+        &::after {
+            content: "";
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 40%;
+            background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            opacity: 0.6;
+        }
+    }
+    footer {
+        background-color: $Very-Light-Gray;
+        position: relative;
+        h4 {
+            color: $Dark-Grayish-Violet;
+            opacity: 0.8;
+            text-transform: uppercase;
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                margin-bottom: 20px;
+            }
+             a {
+                 text-decoration: none;
+                 text-transform: uppercase;
+                 color: $Dark-Violet;
+                 font-weight: 600;
+             }
+        }
+       .sm-bar {
+            position: relative;
+            border-bottom: 1px solid $Grayish-Blue;
+        .sm-icons {
+            display: flex;
+            li a {
+                margin-left: 20px;
+                cursor: pointer;
+            }
+            
+        }
+
+       
+       }
+       &::before {
+           content: "";
+           top: 0;
+           left: 0;
+           height: 60%;
+           width: 100%;
+           background-image: url(../images/bg-pattern-footer-desktop.svg);
+           background-repeat: no-repeat;
+           position: absolute;
+           background-position: top left;
+           
+       }
+    }
+}
+
+//Beginning of mobile view site 
+@media screen and (max-width: 1000px) {
+    header {
+        .rev-mob {
+            flex-direction: column-reverse;
+        }
+        
+    }
+    
+    section {
+        
+        flex-direction: column;
+        justify-content: center;
+        .line-top {
+            text-align: center;
+            &::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .items {
+            flex-direction: column;
+           .item {
+            justify-content: center; 
+            text-align: center;
+            align-items: center; 
+            p {
+                text-align: center;
+            }       
+           }
+        }
+    }
+    .how {
+        flex-direction: column;
+        width: 80%;
+        justify-content: stretch;
+        
+       
+        &::after{
+            background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-position: top right;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    footer {
+        * {
+            z-index: 1;
+        }
+        .sm-bar {
+            flex-direction: column;
+        }
+        .link-bar {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        &::before {
+            content: "";
+            top: 0;
+            left: 0;
+            height: 20%;
+            width: 50%;
+            background-image: url(../images/bg-pattern-footer-mobile.svg);
+            background-repeat: no-repeat;
+            position: absolute;
+            background-position: top;
+            z-index: 0;
+        }
+    }
+}
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; margin-bottom: 40px;}
+.attribution a { color: hsl(228, 45%, 44%); }
