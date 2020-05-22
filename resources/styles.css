@@ -67,10 +67,6 @@ body nav ul li a {
   color: #837d87;
 }
 
-body nav ul li .btn {
-  border: 2px solid #fff;
-}
-
 body nav .ham {
   display: none;
   cursor: pointer;
@@ -103,6 +99,9 @@ body nav .ham {
   body nav .list.shown li a {
     font-size: 1.5em;
     color: #fff;
+  }
+  body nav .list.shown li .btn {
+    border: 2px solid #fff;
   }
   body nav .ham {
     display: block;

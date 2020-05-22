@@ -65,9 +65,7 @@ body {
                     text-transform: uppercase;
                     color: $Dark-Grayish-Violet; 
                 }
-                .btn {
-                    border: 2px solid #fff;
-                }
+                
             }
         }
         .ham {
@@ -101,6 +99,9 @@ body {
                     a {
                         font-size: 1.5em;
                         color: #fff; 
+                    }
+                    .btn {
+                        border: 2px solid #fff;
                     }
                 }
             }
