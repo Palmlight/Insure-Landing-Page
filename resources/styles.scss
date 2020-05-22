@@ -67,6 +67,23 @@ body {
                 }
             }
         }
+        .ham {
+            display: none;
+            cursor: pointer;
+
+        }
+
+        @media screen and (max-width: 1000px) {
+            .nav-m {
+                flex-direction: row;
+            }
+            .ham {
+               display: block;
+           }
+            ul {
+                display: none;
+            }
+        }
     }
     header {
         background-color: $Dark-Violet;
@@ -74,6 +91,13 @@ body {
         padding: 50px 0;
         position: relative;
         margin-bottom: 250px;
+        @media screen and (max-width: 1000px){
+            padding: 0;
+            .container-h{
+                padding-top: 0;
+            }
+            
+        }
         * {
             z-index: 1;
         }
@@ -127,9 +151,17 @@ body {
             max-width: 100%;
             margin-bottom: -250px;
             
-            @media screen and (max-width: 100px){
-                margin-bottom: 0;
-                width: calc(100% + 40px);
+            
+            @media screen and (max-width: 1000px){
+                margin-bottom: -10px;
+                margin-left: -20px;
+                max-width: calc(100% + 40px);
+            }
+        }
+        @media screen and (max-width: 1000px) { 
+            margin-bottom: 20px;
+            &::before {
+                display: none;
             }
         }
     }
@@ -193,6 +225,28 @@ body {
             position: absolute;
             opacity: 0.6;
         }
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+            width: 80%;
+            justify-content: stretch;
+            padding: 20px 45px;
+            h2 {
+                width: 100%;
+                font-size: 2em;
+                text-align: center;
+            }
+       
+            &::after{
+                background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-position: top right;
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
     footer {
         background-color: $Very-Light-Gray;
@@ -248,9 +302,28 @@ body {
 
 //Beginning of mobile view site 
 @media screen and (max-width: 1000px) {
+    nav {
+        .nav-m {
+            flex-direction: column;
+        }
+
+    }
     header {
         .rev-mob {
             flex-direction: column-reverse;
+        }
+        
+        &::before {
+            position: absolute;
+            content: '';
+            // background-image: url("../images/bg-pattern-intro-left-desktop.svg");
+            // bottom: -60%;
+            // left: 0;
+            // width: 40%;
+            // height: 100%;
+            // background-repeat: no-repeat;
+            // background-position: bottom left;
+            z-index: 0;
         }
         
     }
@@ -278,23 +351,7 @@ body {
            }
         }
     }
-    .how {
-        flex-direction: column;
-        width: 80%;
-        justify-content: stretch;
-        
-       
-        &::after{
-            background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-position: top right;
-            width: 100%;
-            height: 100%;
-        }
-    }
+    
     footer {
         * {
             z-index: 1;
