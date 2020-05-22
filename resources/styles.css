@@ -67,6 +67,10 @@ body nav ul li a {
   color: #837d87;
 }
 
+body nav ul li .btn {
+  border: 2px solid #fff;
+}
+
 body nav .ham {
   display: none;
   cursor: pointer;
@@ -75,6 +79,30 @@ body nav .ham {
 @media screen and (max-width: 1000px) {
   body nav .nav-m {
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body nav .nav-m.shown {
+    width: 100vw;
+  }
+  body nav .list.shown {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 40px;
+    background-color: #2b272f;
+    padding-left: 0;
+    padding: 0;
+  }
+  body nav .list.shown li {
+    margin-top: 30px;
+  }
+  body nav .list.shown li a {
+    font-size: 1.5em;
+    color: #fff;
   }
   body nav .ham {
     display: block;

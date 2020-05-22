@@ -65,21 +65,49 @@ body {
                     text-transform: uppercase;
                     color: $Dark-Grayish-Violet; 
                 }
+                .btn {
+                    border: 2px solid #fff;
+                }
             }
         }
         .ham {
             display: none;
             cursor: pointer;
-
         }
 
         @media screen and (max-width: 1000px) {
             .nav-m {
                 flex-direction: row;
+                flex-wrap: wrap;
+                
+            }
+            .nav-m.shown {
+                width: 100vw;
+            }
+            .list.shown {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                align-content: center;
+                text-align: center;
+                width: 100vw;
+                height: 100vh;
+                margin-top: 40px;
+                background-color: $Very-Dark-Violet;
+                padding-left: 0;
+                padding: 0;
+                li {
+                    margin-top: 30px;
+                    a {
+                        font-size: 1.5em;
+                        color: #fff; 
+                    }
+                }
             }
             .ham {
                display: block;
-           }
+               
+            }
             ul {
                 display: none;
             }
